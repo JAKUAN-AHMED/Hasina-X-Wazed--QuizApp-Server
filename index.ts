@@ -8,7 +8,9 @@ app.use(bodyParser.json()); // To parse JSON bodies
 app.use(cors({ origin: ['http://localhost:5173']}));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/quizApp');
+mongoose.connect(
+  "mongodb+srv://newHash:e9GoUKMzvOgaiC3V@cluster0.z5rmhar.mongodb.net/QuizApp?retryWrites=true&w=majority&appName=Cluster0"
+);
 
 // Quiz Schema (with embedded questions)
 const quizSchema = new mongoose.Schema({
